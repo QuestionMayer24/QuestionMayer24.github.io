@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preguntas</title>
+</head>
+<body>
+    <h1>Por favor, responde las siguientes prentas:</h1>
+
+    <p>Pregunta 1: ¿Cuál es tu nombre?</p>
+    <input type="text" id="nombre">
+
+    <p>Pregunta 2: ¿Cuál es tu edad?</p>
+    <input type="number" id="edad">
+
+    <button onclick="mostrarRespuestas()">Mostrar Respuestas</button>
+
+    <p id="respuesta1"></p>
+    <p id="respuesta2"></p>
+
+    <script>
+        function mostrarRespuestas() {
+            var nombre = document.getElementById("nombre").value;
+            var edad = document.getElementById("edad").value;
+
+            document.getElementById("respuesta1").innerHTML = "Tu nombre es: " + nombre;
+            document.getElementById("respuesta2").innerHTML = "Tu edad es: " + edad;
+        }
+    </script>
+</body>
+</html>
+
