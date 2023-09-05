@@ -4,7 +4,7 @@
     <title>Preguntas</title>
 </head>
 <body>
-    <h1>Por favor, responde las siguientes prentas:</h1>
+    <h1>Por favor, responde las siguientes preguntas:</h1>
 
     <p>Pregunta 1: ¿Cuál es tu nombre?</p>
     <input type="text" id="nombre">
@@ -24,8 +24,14 @@
 
             document.getElementById("respuesta1").innerHTML = "Tu nombre es: " + nombre;
             document.getElementById("respuesta2").innerHTML = "Tu edad es: " + edad;
+
+            // Almacenar respuestas en el navegador
+            var respuestas = {
+                nombre: nombre,
+                edad: edad
+            };
+            localStorage.setItem("respuestas", JSON.stringify(respuestas));
         }
     </script>
 </body>
 </html>
-
