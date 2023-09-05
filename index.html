@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Preguntas</title>
+    <title>Encuesta</title>
 </head>
 <body>
-    <h1>Por favor, responde las siguientes preguntas:</h1>
+    <h1>Encuesta</h1>
 
-    <p>Pregunta 1: ¿Cuál es tu nombre?</p>
+    <label for="nombre">Nombre:</label>
     <input type="text" id="nombre">
 
-    <p>Pregunta 2: ¿Cuál es tu edad?</p>
+    <label for="edad">Edad:</label>
     <input type="number" id="edad">
 
-    <button onclick="mostrarRespuestas()">Mostrar Respuestas</button>
+    <button onclick="guardarRespuestas()">Guardar Respuestas</button>
 
-    <p id="respuesta1"></p>
-    <p id="respuesta2"></p>
+    <h2>Respuestas guardadas:</h2>
+    <p>Nombre: <span id="respuestaNombre"></span></p>
+    <p>Edad: <span id="respuestaEdad"></span></p>
 
     <script>
-        function mostrarRespuestas() {
+        function guardarRespuestas() {
             var nombre = document.getElementById("nombre").value;
             var edad = document.getElementById("edad").value;
 
-            document.getElementById("respuesta1").innerHTML = "Tu nombre es: " + nombre;
-            document.getElementById("respuesta2").innerHTML = "Tu edad es: " + edad;
+            localStorage.setItem("nombre", nombre);
+            localStorage.setItem("edad", edad);
 
-            // Almacenar respuestas en el navegador
-            var respuestas = {
-                nombre: nombre,
-                edad: edad
-            };
-            localStorage.setItem("respuestas", JSON.stringify(respuestas));
+            // Mostrar respuestas guardadas
+            document.getElementById("respuestaNombre").textContent = nombre;
+            document.getElementById("respuestaEdad").textContent = edad;
+        }
+
+        // Recuperar respuestas guardadas al cargar la página
+        var nombreGuardado = localStorage.getItem("nombre");
+        var edadGuardada = localStorage.getItem("edad");
+
+        if (nombreGuardado) {
+            document.getElementById("respuestaNombre").textContent = nombreGuardado;
+        }
+
+        if (edadGuardada) {
+            document.getElementById("respuestaEdad").textContent = edadGuardada;
         }
     </script>
 </body>
