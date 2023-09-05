@@ -1,47 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-MX">
+
 <head>
-    <title>Encuesta</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
+
 <body>
-    <h1>Encuesta</h1>
+    <h1>Prueba de conocimientos</h1>
+    <form action="#" id="quizForm">
+        <p>1. ¿Cuál es la capital de España?</p>
+        <input type="radio" name="q1" value="a">a) Barcelona<br>
+        <input type="radio" name="q1" value="b">b) Madrid<br>
+        <input type="radio" name="q1" value="c">c) Valencia<br>
 
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre">
+        <p>2. ¿Quién escribió "Cien años de soledad"?</p>
+        <input type="radio" name="q2" value="a">a) Gabriel García Márquez<br>
+        <input type="radio" name="q2" value="b">b) Pablo Neruda<br>
+        <input type="radio" name="q2" value="c">c) Mario Vargas Llosa<br>
 
-    <label for="edad">Edad:</label>
-    <input type="number" id="edad">
+        <button type="button" onclick="calcularResultado()">Enviar respuestas</button>
+    </form>
 
-    <button onclick="guardarRespuestas()">Guardar Respuestas</button>
-
-    <h2>Respuestas guardadas:</h2>
-    <p>Nombre: <span id="respuestaNombre"></span></p>
-    <p>Edad: <span id="respuestaEdad"></span></p>
+    <p id="resultado"></p>
 
     <script>
-        function guardarRespuestas() {
-            var nombre = document.getElementById("nombre").value;
-            var edad = document.getElementById("edad").value;
+        function calcularResultado() {
+            var form = document.getElementById("quizForm");
+            var respuesta1 = form.elements["q1"].value;
+            var respuesta2 = form.elements["q2"].value;
+            var aciertos = 0;
 
-            localStorage.setItem("nombre", nombre);
-            localStorage.setItem("edad", edad);
+            if (respuesta1 === "b") {
+                aciertos++;
+            }
+            if (respuesta2 === "a") {
+                aciertos++;
+            }
 
-            // Mostrar respuestas guardadas
-            document.getElementById("respuestaNombre").textContent = nombre;
-            document.getElementById("respuestaEdad").textContent = edad;
+            var porcentaje = aciertos / 2 * 100;
+            var resultado = "Has acertado el " + porcentaje + "% de las preguntas.";
+
+            document.getElementById("resultado").innerHTML = resultado;
+
+            enviarCorreo(porcentaje);
         }
 
-        // Recuperar respuestas guardadas al cargar la página
-        var nombreGuardado = localStorage.getItem("nombre");
-        var edadGuardada = localStorage.getItem("edad");
+        function enviarCorreo(porcentaje) {
+            var correoDestino = "destinatario@ejemplo.com";
+            var asunto = "Resultados de la prueba";
+            var mensaje = "Has acertado el " + porcentaje + "% de las preguntas.";
 
-        if (nombreGuardado) {
-            document.getElementById("respuestaNombre").textContent = nombreGuardado;
-        }
-
-        if (edadGuardada) {
-            document.getElementById("respuestaEdad").textContent = edadGuardada;
+            window.location.href = "mailto:" + correoDestino + "?subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(mensaje);
         }
     </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
