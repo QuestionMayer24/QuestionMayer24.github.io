@@ -83,7 +83,6 @@
     margin-right: 3% ; /* Esto centra el cuadro horizontalmente en la pantalla */
     max-width: 300px;
     padding: 20px;
-    max-width: 300px;
     background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
     border: 1px solid #5f2727;
     border-radius: 5px;
@@ -112,6 +111,13 @@
             border-radius: 5px;
          /*   text-align: right;
           /*  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
+       @media (max-width: 767px) {
+    font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    /* Otros estilos para pantallas pequeñas */
+    max-width: 100px;
+    background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
+    border: 1px solid #5f2727;
+  }
         }
 
         p {
