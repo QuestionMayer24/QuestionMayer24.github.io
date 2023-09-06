@@ -48,24 +48,6 @@
     gap: 60px;
     padding: 40px;
 }
-
-/*.boton-enlace {
-    background-color: #3a89dd;
-    color: #fff;
-    border: none;
-    padding: 30px;
-    cursor: pointer;
-    text-align: left;
-}
-
-.boton-enlace a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.boton-enlace:hover {
-    background-color: #2f8bef;
-}*/
 /* Estilo para los botones */
 .boton-enlace {
  /* background-color: #b44a94;*/
@@ -83,13 +65,10 @@
     text-decoration: none;
     color: #d7d0c9;
 }
-
 /* Efecto 3D en hover */
 .boton-enlace:hover {
   transform: perspective(10px) translateZ(3px);
 }
-
-
         h1 {
             font-family: "Curlz MT", cursive; /* Fuente Curlz MT para el título */
             color: #f9ef66;
@@ -104,9 +83,17 @@
     margin-right: 3% ; /* Esto centra el cuadro horizontalmente en la pantalla */
     max-width: 300px;
     padding: 20px;
+    max-width: 300px;
     background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
     border: 1px solid #5f2727;
     border-radius: 5px;
+    @media (max-width: 767px) {
+    font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    /* Otros estilos para pantallas pequeñas */
+    max-width: 100px;
+    background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
+    border: 1px solid #5f2727;
+  }
 }
 /* Estilos adicionales para el cuadro de preguntas */
 .preguntas-box form {
@@ -117,6 +104,7 @@
             max-width: 300px;
             margin: 0 auto;
             padding: 20px;
+
            background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(18, 27, 23)); /* Fondo de degradado amarillo y negro */
           /*  background-color:linear-gradient(to bottom, yellow, black);*/
           /*  background-color: #e4f0b0f2;*/
@@ -175,7 +163,7 @@
     <h1>Hola Bienvenida :3</h1>
     <div class="preguntas-box">
         <form action="#" id="quizForm">
-            <p>One.  ¿Podemos Salir Este Fin De Semana :)?</p>
+            <p>One.  ¿Podemos Salir Este Fin De Semana?</p>
             <label><input type="radio" name="q1" value="a" onclick="habilitarPregunta2()">a) Si :D</label><br>
             <label><input type="radio" name="q1" value="b" onclick="mostrarMensaje()">b)  No :'c</label><br>
 
@@ -339,3 +327,4 @@
 </body>
 
 </html>
+
