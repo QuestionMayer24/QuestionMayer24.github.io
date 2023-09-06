@@ -9,6 +9,13 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
         body {
+
+            font-size: 16px; /* Tamaño de fuente predeterminado para pantallas grandes */
+  /* Otros estilos para pantallas grandes */
+  @media (max-width: 767px) {
+    font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    /* Otros estilos para pantallas pequeñas */
+  }
       background-image: linear-gradient(to bottom, #300909, #ff5733); /* Degradado de colores para el fondo */
     background-image:url('https://images.unsplash.com/photo-1577023311546-cdc07a8454d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');
    /* background-image: url('https://i.ibb.co/xC6H9fs/your-image.jpg');*/
@@ -33,8 +40,8 @@
 
 #botones {
     position: fixed;
-    left: 10%;
-    top: 10%;
+    left: 4%;
+    top: 2%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -79,7 +86,7 @@
 
 /* Efecto 3D en hover */
 .boton-enlace:hover {
-  transform: perspective(10px) translateZ(5px);
+  transform: perspective(10px) translateZ(3px);
 }
 
 
@@ -187,10 +194,10 @@
     </div>
     <div id="degradado-fondo">
         <div id="botones">
-            <button class="boton-enlace" onclick="mostrarTexto('Te dije que no presionaras los botones 😾',450,115)"><a href="https://ivanvi14.github.io/" target="_blank">Boton 1</a></button>
-            <button class="boton-enlace" onclick="mostrarTexto('Sabia que lo presionarias 🤨',450,225)"><a href="https://www.tiktok.com" target="_blank">Boton 2</a></button>
-            <button class="boton-enlace" onclick="mostrarTexto('Siempre te gusta llevar la contraria 😖',450,335)"><a href="https://www.facebook.com" target="_blank">Boton 3</a></button>
-            <button class="boton-enlace" onclick="mostrarTexto('Tranqui luego los habilito 🫣',450,445)"><a href="https://www.instagram.com" target="_blank">Boton 4</a></button>
+            <button class="boton-enlace" onclick="mostrarTexto('Te dije que no presionaras los botones 😾',310,60)"><a href="https://ivanvi14.github.io/" target="_blank">Boton 1</a></button>
+            <button class="boton-enlace" onclick="mostrarTexto('Sabia que lo presionarias 🤨',310,170)"><a href="https://www.tiktok.com" target="_blank">Boton 2</a></button>
+            <button class="boton-enlace" onclick="mostrarTexto('Siempre te gusta llevar la contraria 😖',310,280)"><a href="https://www.facebook.com" target="_blank">Boton 3</a></button>
+            <button class="boton-enlace" onclick="mostrarTexto('Tranqui luego los habilito 🫣',310,390)"><a href="https://www.instagram.com" target="_blank">Boton 4</a></button>
         </div>
         <!-- Tu contenido principal aquí -->
     </div>
