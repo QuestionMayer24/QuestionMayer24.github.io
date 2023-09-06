@@ -12,7 +12,7 @@
 
             font-size: 16px; /* Tamaño de fuente predeterminado para pantallas grandes */
   /* Otros estilos para pantallas grandes */
-  @media (max-width: 767px) {
+  @media (max-width: 1000px) {
     font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
     /* Otros estilos para pantallas pequeñas */
   }
@@ -47,7 +47,7 @@
     align-items: flex-start;
     gap: 60px;
     padding: 40px;
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
     font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
     gap: 38px;
     /* Otros estilos para pantallas pequeñas */
@@ -87,16 +87,15 @@
 .preguntas-box {
     margin-left: auto; /* Esto alinea el cuadro a la derecha */
     margin-right: 3% ; /* Esto centra el cuadro horizontalmente en la pantalla */
-    max-width: 300px;
+    max-width: 500px;
     padding: 20px;
-    max-width: 300px;
     background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
     border: 1px solid #5f2727;
     border-radius: 5px;
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
     font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
     /* Otros estilos para pantallas pequeñas */
-    max-width: 100px;
+    max-width: 200px;
     background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
     border: 1px solid #5f2727;
   }
@@ -107,7 +106,7 @@
             font-family: "Times New Roman", Times, serif; /* Utiliza Times New Roman como fuente */
             margin-left: auto; /* Esto alinea el cuadro a la derecha */
             margin-right: auto; /* Esto centra el cuadro horizontalmente en la pantalla */
-            max-width: 300px;
+            max-width: 500px;
             margin: 0 auto;
             padding: 20px;
 
@@ -116,10 +115,10 @@
           /*  background-color: #e4f0b0f2;*/
             border: 1px solid #5f2727;
             border-radius: 5px;
-            @media (max-width: 767px) {
+            @media (max-width: 100px) {
     font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
     /* Otros estilos para pantallas pequeñas */
-    max-width: 100px;
+    max-width: 200px;
     background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
     border: 1px solid #5f2727;
   }
@@ -190,7 +189,7 @@
             <!-- Nueva pregunta para comentarios finales -->
             <p id="pregunta4" style="display: none;">3. Añade un comentario final:</p>
             <textarea id="comentarioFinal" style="display: none;"></textarea>
-            <button type="button" id="enviarBtn" disabled onclick="calcularResultado()">Envia tus hermosas respuestas jaja</button>
+            <button type="button" id="enviarBtn" disabled onclick="calcularResultado()">Envia tus hermoss respuestas jaja</button>
         </form>
     </div>
     <div id="degradado-fondo">
@@ -289,14 +288,14 @@
   var parrafo = document.createElement("p");
   parrafo.textContent = texto;
  // Aplicar estilos para la posición
- if (window.innerWidth <= 767) {
+ if (window.innerWidth <= 1000) {
 left=left-50;
 top=top+10;
  }
  parrafo.style.position = "absolute";
   parrafo.style.left =left + "px";
   parrafo.style.top = top + "px";
-  if (window.innerWidth <= 767) {
+  if (window.innerWidth <= 1000) {
   // Realiza alguna acción específica para pantallas con un ancho igual o inferior a 767 píxeles
    parrafo.style.fontSize = 7 + "px"; // Cambiar el tamaño de la letra  
   // Agregar el párrafo al documento
@@ -348,3 +347,4 @@ top=top+10;
 </body>
 
 </html>
+
