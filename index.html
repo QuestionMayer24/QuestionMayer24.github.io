@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Question for you</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
         body {
-
             font-size: 16px; /* Tamaño de fuente predeterminado para pantallas grandes */
   /* Otros estilos para pantallas grandes */
   @media (max-width: 1000px) {
@@ -23,7 +22,7 @@
    /* background-position: center bottom;*/
     background-size: 90% ;/*auto; /* Tamaño de la imagen de fondo (50% de ancho y altura automática) */ 
         background-repeat: no-repeat; /* Evita que la imagen se repita */
-      /*   background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
+      /* background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
         background-position: center center; /* Muestra la parte de abajo de la imagen */
         font-family: "Times New Roman", Times, serif;
         color: #f4eeee;
@@ -31,17 +30,44 @@
      /*  background-image: linear-gradient(to bottom, #300909, #ff5733); /* Degradado de colores para el fondo */
         }
         #degradado-fondo {
-    /* Tu estilo de fondo y márgenes aquí */
     background-color: #300909;
     background-image: url('tu-imagen-de-fondo.jpg'); /* Cambia 'tu-imagen-de-fondo.jpg' por la URL de tu imagen de fondo */
     background-size: cover; /* Para ajustar la imagen de fondo al tamaño de la ventana */
-    /* Otros estilos de fondo, márgenes, etc. */
+}
+/* Estilos para el cuadro de texto */
+.cuadro-texto {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical según tus preferencias */
+    left: 10px; /* Ajusta la posición horizontal según tus preferencias */
+    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo con transparencia */
+    padding: 10px;
+    border: 1px solid #000; /* Borde del cuadro de texto */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra alrededor del cuadro */
+    @media (max-width: 1000px) {
+    top: 1px; /* Ajusta la posición vertical según tus preferencias */
+    left: 1px; /* Ajusta la posición horizontal según tus preferencias */
+  }
+}
+#texto-superior-izquierda {
+    width: 400px; /* Ancho del cuadro de texto */
+    height: 200px; /* Altura del cuadro de texto */
+    resize: none; /* Evita que el usuario redimensione el cuadro */
+    border: none; /* Elimina el borde del cuadro de texto */
+  /*  outline: none; /* Elimina el resaltado del cuadro de texto al hacer clic */
+    font-size: 19.1px; /* Tamaño de fuente del texto */
+    font-family:'Italic_IV50', sans-serif; /* Fuente del texto */
+    @media (max-width: 1000px) {
+    font-size: 9.5px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    width: 200px; /* Ancho del cuadro de texto */
+    height: 100px; /* Altura del cuadro de texto */
+}
 }
 /* Estilo para el contenedor de botones */
 #botones {
     position: fixed;
     left: 9%;
-    top: 12%;
+    top: 30%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -49,19 +75,16 @@
     padding: 20px;
     @media (max-width: 1000px) {
     font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    /* Otros estilos para pantallas pequeñas */
-    gap: 30px; 
-    left: 7%;
+    gap: 10px; 
+    left: 6%;
   }
 }
-
 /* Estilo para el contenedor de cada botón y su texto */
 .boton-container {
     display: flex;
     align-items: center;
     gap: 30px; /* Ajusta el espacio entre el botón y el texto */
 }
-
 /* Estilo para el texto de los botones */
 .boton-texto {
     font-size: 30px; /* Tamaño de fuente para el texto de los botones */
@@ -71,7 +94,6 @@
     font-size: 15px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
   }
 }
-
 /* Estilo para los botones (sin cambios) */
 .boton-enlace {
     background: linear-gradient(to bottom, rgb(193, 31, 233), rgb(0, 0, 0));
@@ -84,21 +106,16 @@
     transition: transform 0.3s;
     margin-right: 10px;
 }
-
 .boton-enlace a {
     text-decoration: none;
     color: #d7d0c9;
 }
-
 /* Efecto 3D en hover (sin cambios) */
 .boton-enlace:hover {
     transform: perspective(10px) translateZ(3px);
 }
-
-
 .title-container {
     background: linear-gradient(to bottom, rgba(249, 239, 102, 0.4), rgba(245, 166, 35, 0.7)); /* Degradado de colores con transparencia para el fondo del cuadro */
-
   /*  background-color: rgba(57, 64, 71, 0.7); /* Color con transparencia */
            /* background: linear-gradient(to bottom, #f9ef66, #f5a623); /* Degradado de colores para el fondo del cuadro */
             padding: 10px; /* Espaciado interno dentro del cuadro */
@@ -114,7 +131,7 @@
             font-size: 60px; /* Tamaño del título, puedes ajustarlo aquí */
             margin-right: 0%; /* Ajusta el margen derecho para alinear el texto a la posición deseada */
             @media (max-width: 1000px) {
-    font-size: 40px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    font-size: 38px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
   }
             /*    opacity: 0.1; /* Ajusta el valor de opacidad según tus preferencias */
         }
@@ -127,7 +144,6 @@
             margin-right: 3%; /* Ajusta el margen derecho para alinear el texto a la posición deseada */
             @media (max-width: 1000px) {
             font-size: 16px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    /* Otros estilos para pantallas pequeñas */
   }
         }
 /* Ajusta el margen izquierdo del contenedor principal para moverlo hacia la derecha */
@@ -141,7 +157,6 @@
     border-radius: 5px;
     @media (max-width: 1000px) {
     font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    /* Otros estilos para pantallas pequeñas */
     max-width: 260px;
     background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
     border: 1px solid #5f2727;
@@ -156,23 +171,16 @@
             max-width: 500px;
             margin: 0 auto;
             padding: 20px;
-
            background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(18, 27, 23)); /* Fondo de degradado amarillo y negro */
-          /*  background-color:linear-gradient(to bottom, yellow, black);*/
-          /*  background-color: #e4f0b0f2;*/
             border: 1px solid #5f2727;
             border-radius: 5px;
-            @media (max-width: 100px) {
+            @media (max-width: 1000px) {
     font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    /* Otros estilos para pantallas pequeñas */
     max-width: 260px;
     background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
     border: 1px solid #5f2727;
   }
-         /*   text-align: right;
-          /*  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
         }
-
         p {
             font-size: 23px;
             color: #f5f2f2;
@@ -182,18 +190,14 @@
 .mostrar-pregunta2 p {
     margin-bottom: 1px; /* Ajustar el espacio inferior cuando se muestra la segunda pregunta */
 }
-
-
         label {
             font-weight: bold;
             display: block; /* Hacer que las etiquetas sean elementos de bloque para ajustar espaciado */
             margin-bottom: 1px; /* Espacio inferior entre etiquetas y opciones */
         }
-
         input[type="radio"] {
             margin-right: 8px;
         }
-
         button[type="button"] {
             background: linear-gradient(to bottom, rgb(31, 233, 163), rgb(18, 27, 23)); /* Fondo de degradado amarillo y negro */
           /*  background-color: #2f8bef;*/
@@ -204,78 +208,79 @@
             cursor: pointer;
             border-radius: 5px;
         }
-
         button[type="button"]:hover {
             background-color: #3a89dd;
         }
-
         #resultado {
-            font-size: 20px;
+            font-size: 22px;
             text-align: right;
             margin-top: 20px;
-            color: #007bff;
+            color: #52877e;
+            margin-right: 3%; /* Ajusta el margen derecho para alinear el texto a la posición deseada */
+            @media (max-width: 1000px) {
+    font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+            }
         }
     </style>
 </head>
-
 <body>
     <div class="title-container">
     <h1>Hola Mayer Bienvenida :3</h1>
 </div>
     <h2>Responde las preguntas porfi 🙂</h2>
+    <div class="cuadro-texto">
+        <textarea id="texto-superior-izquierda" placeholder="Los botones aun no deberias presionarlos, cuando termines de responder, envias las respuestas y se abre tu correo, solo le das enviar y listo, ufff que dificil hacer una pagina web 😪 no me juzgues jaja"readonly></textarea></textarea>
+    </div>
     <div class="preguntas-box">
         <form action="#" id="quizForm">
-            <p>One.  ¿Podemos Salir Este Fin De Semana?</p>
+            <p>Wan.  ¿Podemos Salir Este Fin De Semana?</p>
             <label><input type="radio" name="q1" value="a" onclick="habilitarPregunta2()">a) Si :D</label><br>
             <label><input type="radio" name="q1" value="b" onclick="mostrarMensaje()">b)  No :'c</label><br>
-
-            <p id="pregunta2" style="display: none;">Two. ¿En Donde Vas A Estar?</p>
+            <p id="pregunta2" style="display: none;">Tu. ¿En Donde Vas A Estar?</p>
             <label id="respuesta2a" style="display: none;"><input type="radio" name="q2" value="a" onclick="habilitarPregunta3()" >a) Pasto</label><br>
             <label id="respuesta2b" style="display: none;"><input type="radio" name="q2" value="b" onclick="mostrarMensaje2()" >b) Ipi</label><br>
-
-            <p id="pregunta3" style="display: none;">Three. ¿Que Dia Prefieres?</p>
+            <p id="pregunta3" style="display: none;">Tri. ¿Que Dia Prefieres?</p>
             <label id="respuesta3a" style="display: none;"><input type="radio" name="q3" value="a" onclick="habilitarPregunta4()" >a) Sabado</label><br>
             <label id="respuesta3b" style="display: none;"><input type="radio" name="q3" value="b" onclick="habilitarPregunta41()" >b) Domingo</label><br>
             <!-- Nueva pregunta para comentarios finales -->
-            <p id="pregunta4" style="display: none;">3. Añade un comentario final:</p>
-            <textarea id="comentarioFinal" style="display: none;"></textarea>
+            <p id="pregunta5" style="display: none;">Fai. Escribe tu excusa entonces :'c jaja :</p>
+            <textarea id="comentarioFinal2" style="display: none;"></textarea>
+            <p id="pregunta4" style="display: none;">For. Añade un comentario sobre la salida o si tienes algo por decir:</p>
+            <textarea id="comentarioFinal" style="display: none; overflow-wrap: break-word; white-space: pre-wrap;"></textarea>       
             <button type="button" id="enviarBtn" disabled onclick="calcularResultado()">Envia tus hermosas respuestas jaja</button>
         </form>
     </div>
     <div id="degradado-fondo">
         <div id="botones">
             <div class="boton-container">
-                <button class="boton-enlace" id="boton1" onclick="mostrarTexto('Te dije que no presionaras los botones 😾', 'textoBoton1')">
+                <button class="boton-enlace" id="boton1" value="b1" name="qb1" onclick="mostrarTexto('Te dije que no presionaras los botones 😾', 'textoBoton1',this.value); guardarValorBoton1(this.value)">
                     <a href="https://ivanvi14.github.io/" target="_blank">Boton 1</a>
                 </button>
                 <span id="textoBoton1" class="boton-texto"></span>
             </div>
             <div class="boton-container">
-                <button class="boton-enlace" onclick="mostrarTexto('Sabía que lo presionarías 🤨', 'textoBoton2')">
-                    <a href="https://www.tiktok.com" target="_blank">Boton 2</a>
+                <button class="boton-enlace" id="boton2" value="b2" name="qb2" onclick="mostrarTexto('Sabía que lo presionarías 🤨', 'textoBoton2',this.value); guardarValorBoton2(this.value)">
+                    <a href="https://ivanvi14.github.io/" target="_blank">Boton 2</a>
                 </button>
                 <span id="textoBoton2" class="boton-texto"></span>
             </div>
             <div class="boton-container">
-                <button class="boton-enlace" onclick="mostrarTexto('Siempre te gusta llevar la contraria 😖','textoBoton3')">
-                    <a href="https://www.facebook.com" target="_blank">Boton 3</a>
+                <button class="boton-enlace" id="boton3" value="b3" name="qb3" onclick="mostrarTexto('Siempre te gusta llevar la contraria 😖','textoBoton3',this.value); guardarValorBoton3(this.value)">
+                    <a href="https://ivanvi14.github.io/" target="_blank">Boton 3</a>
                 </button>
                 <span id="textoBoton3" class="boton-texto"></span>
             </div>
             <div class="boton-container">
-                <button class="boton-enlace" onclick="mostrarTexto('Tranqui luego los habilito 🫣', 'textoBoton4')">
-                    <a href="https://www.instagram.com" target="_blank">Boton 4</a>
+                <button class="boton-enlace" id="boton4" value="b4" name="qb4" onclick="mostrarTexto('Tranqui luego los habilito 🫣', 'textoBoton4',this.value); guardarValorBoton4(this.value)">
+                    <a href="https://ibb.co/RQvDDHM" target="_blank">Boton 4</a>
                 </button>
                 <span id="textoBoton4" class="boton-texto"></span>
             </div>
-        </div>
-        
+        </div>    
         <!-- Tu contenido principal aquí -->
     </div>
     <div id="contenedor-texto"></div>
-
     <p id="resultado"></p>
-
     <script>
         function habilitarPregunta2() {
             alert("Esooo sabia que querias :3");
@@ -284,7 +289,9 @@
             var respuesta2a = document.getElementById('respuesta2a');
             var respuesta2b = document.getElementById('respuesta2b');
             document.getElementById('enviarBtn').disabled = false;
-
+            pregunta5.style.display = "none";
+            comentarioFinal2.style.display = "none";
+            pregunta5.classList.remove("mostrar-pregunta4"); // Agregar la clase para ajustar el espaciado
             if (respuesta1 === "a") {
                 pregunta2.style.display = "block";
                 respuesta2a.style.display = "block";
@@ -297,7 +304,6 @@
                 pregunta2.classList.remove("mostrar-pregunta2"); // Agregar la clase para ajustar el espaciado
             }
         }
-
         function mostrarMensaje() {
             alert("Como que no quieres, te odio >:v jajaj");
             pregunta2.style.display = "none";
@@ -307,9 +313,16 @@
             pregunta3.style.display = "none";
             respuesta3a.style.display = "none";
             respuesta3b.style.display = "none";
-            pregunta3.classList.remove("mostrar-pregunta2"); // Agregar la clase para ajustar el espaciado
+            pregunta3.classList.remove("mostrar-pregunta3"); // Agregar la clase para ajustar el espaciado
             document.getElementById('enviarBtn').disabled = false;
             // Desseleccionar radios de la segunda pregunta
+            var pregunta5 = document.getElementById('pregunta5');
+            var comentarioFinal2 = document.getElementById('comentarioFinal2');
+            pregunta5.style.display = "block";
+            comentarioFinal2.style.display = "block";
+            pregunta4.style.display = "none";
+            comentarioFinal.style.display = "none";
+            pregunta4.classList.remove("mostrar-pregunta4"); // Agregar la clase para ajustar el espaciado
         document.querySelectorAll('input[name="q2"]').forEach(function(radio) {
             radio.checked = false;
             radio.disabled = false; // Habilitar radios nuevamente
@@ -332,7 +345,6 @@
                 pregunta3.classList.add("mostrar-pregunta2"); // Agregar la clase para ajustar el espaciado
             } 
         }
-
         function mostrarMensaje2() {
             alert("Uy entonces vienes tu, chevere xd");
             var respuesta2 = document.querySelector('input[name="q2"]:checked').value;
@@ -347,67 +359,116 @@
         }
     }
     function habilitarPregunta4() {
-            alert("Esooo sabia que queriaaaas :3");
+            alert("Nunca hemos salido un sabado :0");
             var pregunta4 = document.getElementById('pregunta4');
             var comentarioFinal = document.getElementById('comentarioFinal');
-
+            pregunta4.style.display = "block";
+            comentarioFinal.style.display = "block";
+    }
+    function habilitarPregunta41() {
+            alert("Siempre eran buenos esos domingos :)");
+            var pregunta4 = document.getElementById('pregunta4');
+            var comentarioFinal = document.getElementById('comentarioFinal');
             pregunta4.style.display = "block";
             comentarioFinal.style.display = "block";
     }
     function mostrarTexto(texto, spanId) {   
     // Obtener todos los elementos <span> con la clase "boton-texto"
     var spans = document.getElementsByClassName("boton-texto");
-
     // Iterar sobre los elementos <span> y borrar su contenido
     for (var i = 0; i < spans.length; i++) {
         spans[i].textContent = "";
     }
-
     // Obtener el elemento <span> con el identificador único
     var span = document.getElementById(spanId);
-
     // Cambiar el contenido del elemento <span> con el texto deseado
     span.textContent = texto;
-
     // Aplicar estilos adicionales al elemento <span> si es necesario
     // Puedes agregar estilos CSS al elemento <span> aquí si deseas cambiar su apariencia
 }
-
-
-
-
-
+var valorBoton1 = ""; // Variable global para almacenar el valor del botón
+var valorBoton2 = ""; // Variable global para almacenar el valor del botón
+var valorBoton3 = ""; // Variable global para almacenar el valor del botón
+var valorBoton4 = ""; // Variable global para almacenar el valor del botón
+function guardarValorBoton1(valor1) {
+    valorBoton1 = valor1;
+}
+function guardarValorBoton2(valor2) {
+    valorBoton2 = valor2;
+}
+function guardarValorBoton3(valor3) {
+    valorBoton3 = valor3;
+}
+function guardarValorBoton4(valor4) {
+    valorBoton4 = valor4;
+}
         function calcularResultado() {
             var form = document.getElementById("quizForm");
+            console.log("El valor del botón es: " + valorBoton1);
+            console.log("El valor del botón es: " + valorBoton2);
+            console.log("El valor del botón es: " + valorBoton3);
+            console.log("El valor del botón es: " + valorBoton4);
             var respuesta1 = form.elements["q1"].value;
             var respuesta2 = form.elements["q2"].value;
+            var respuesta3 = form.elements["q3"].value;
             var aciertos = 0;
-
+            var r1 = 0;
+            var r2 = 0;
+            var r3 = 0;
+            var r4 = 0;
+           if (valorBoton1 === "b1") {
+                r1 = 1;
+            }
+            if (valorBoton2 === "b2") {
+                r2 = 1;
+            }
+            if (valorBoton3 === "b3") {
+                r3 = 1;
+            }
+            if (valorBoton4 === "b4") {
+                r4 = 1;
+            }
             if (respuesta1 === "b") {
-                aciertos++;
+                aciertos = 1;
             }
-            if (respuesta2 === "a") {
-                aciertos++;
+            if (respuesta1 === "a") {
+                if (respuesta2 === "a") {
+                    if (respuesta3 === "a") {
+                aciertos = 211;
             }
-
-            var porcentaje = aciertos / 2 * 100;
-            var resultado = "Has acertado el " + porcentaje + "% de las preguntas.";
-
+                    if (respuesta3 === "b") {
+                aciertos = 212;
+            }
+            }
+                if (respuesta2 === "b") {
+                    if (respuesta3 === "a") {
+                aciertos = 221;
+            }
+                    if (respuesta3 === "b") {
+                aciertos = 222;
+            }
+            }
+            }
+            var porcentaje = aciertos;
+            if (respuesta1 === "b") {
+            var resultado = "Lamento que no quisieras salir, me hubiese encantado :'3";
+            }
+            if (respuesta1 === "a") {
+            var resultado = "Me alegra que hayas querido salir, sera un buen dia  :3";
+            }
+          // Obtener el comentario del usuario
+            var comentarioUsuario = document.getElementById("comentarioFinal").value;
+            var comentarioUsuario2 = document.getElementById("comentarioFinal2").value;
             document.getElementById("resultado").innerHTML = resultado;
-
-            enviarCorreo(porcentaje);
+            enviarCorreo(porcentaje,comentarioUsuario,comentarioUsuario2,r1,r2,r3,r4);
         }
-
-        function enviarCorreo(porcentaje) {
-            var correoDestino = "destinatario@ejemplo.com";
-            var asunto = "Resultados de la prueba";
-            var mensaje = "Has acertado el " + porcentaje + "% de las preguntas.";
-
+        function enviarCorreo(porcentaje,comentarioUsuario,comentarioUsuario2,r1,r2,r3,r4) {
+            var correoDestino = "andresv-14@hotmail.com";
+            var asunto = "Respuesta";
+            var mensaje = "-------------------------------------------Muchas gracias por responder TQM <3.-----------------------------------------\n----------------------%&$&$%%&&$$%$12w2w223s2#"+porcentaje+"fggsdg2312$%%3----------------------------------------\n------------------------$%$%&%&$&$&&#"+r1+"$$$%$%$$&#"+r2+"%$$%#"+r3+"%&%$%#"+r4+"$$%$%$%-------------------------\n--------------"+comentarioUsuario+"-------------\n----------"+comentarioUsuario2+"---------------";
             window.location.href = "mailto:" + correoDestino + "?subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(mensaje);
         }
     </script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
@@ -415,6 +476,4 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
-
