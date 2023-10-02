@@ -21,7 +21,7 @@
       background-size: cover;
    /* background-position: center bottom;*/
     background-size: 100% ;/*auto; /* Tamaño de la imagen de fondo (50% de ancho y altura automática) */ 
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
+       /* background-repeat: no-repeat; /* Evita que la imagen se repita */
       /* background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
       /*  background-position: center center; /* Muestra la parte de abajo de la imagen */
         font-family: "Times New Roman", Times, serif;
@@ -80,9 +80,11 @@
     gap: 40px; /* Ajusta el espacio entre los botones */
     padding: 20px;
     @media (max-width: 1000px) {
-    font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    gap: 10px; 
+    font-size: 12px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    gap: 1px; 
     left: 6%;
+    padding: 2px;
+    top: 30%;
   }
 }
 /* Estilo para el contenedor de cada botón y su texto */
@@ -113,6 +115,11 @@
     transform: perspective(10px) translateZ(0);
     transition: transform 0.3s;
     margin-right: 10px;
+    @media (max-width: 1000px) {
+        width: 120px;
+    height: 40px;
+  }
+  
 }
 .boton-enlace a {
     text-decoration: none;
@@ -163,7 +170,7 @@
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
     /* Otros estilos según tus preferencias */
     @media (max-width: 1000px) {
-        bottom: 355px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+        bottom: 290px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
         left: 1px; /* Lo centra horizontalmente en relación al contenedor padre */
     }
 }
