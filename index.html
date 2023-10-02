@@ -16,14 +16,14 @@
     /* Otros estilos para pantallas pequeñas */
   }
       background-image: linear-gradient(to bottom, #300909, #ff5733); /* Degradado de colores para el fondo */
-    background-image:url('https://images.unsplash.com/photo-1577023311546-cdc07a8454d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');
-   /* background-image: url('https://i.ibb.co/xC6H9fs/your-image.jpg');*/
+    background-image:url('https://images.unsplash.com/photo-1531789058749-c81ce282c3e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80');
+   /* background-image: url('https://unsplash.com/es/fotos/Y6L9VCHoN6g');*/
       background-size: cover;
    /* background-position: center bottom;*/
-    background-size: 90% ;/*auto; /* Tamaño de la imagen de fondo (50% de ancho y altura automática) */ 
+    background-size: 100% ;/*auto; /* Tamaño de la imagen de fondo (50% de ancho y altura automática) */ 
         background-repeat: no-repeat; /* Evita que la imagen se repita */
       /* background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
-        background-position: center center; /* Muestra la parte de abajo de la imagen */
+      /*  background-position: center center; /* Muestra la parte de abajo de la imagen */
         font-family: "Times New Roman", Times, serif;
         color: #f4eeee;
         background-color: #42443d; /* Color de fondo para el margen */
@@ -38,36 +38,42 @@
 .cuadro-texto {
     position: absolute;
     top: 10px; /* Ajusta la posición vertical según tus preferencias */
-    left: 10px; /* Ajusta la posición horizontal según tus preferencias */
-    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo con transparencia */
+    left: 895px; /* Ajusta la posición horizontal según tus preferencias */
+   /* background-color: yellow; /* Cambia "yellow" al color que desees */
+   font-size: 20px; /* Tamaño de fuente del texto */
+    background-color: rgba(4, 88, 124, 0.7); /* Color de fondo con transparencia */
     padding: 10px;
     border: 1px solid #000; /* Borde del cuadro de texto */
     border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra alrededor del cuadro */
     @media (max-width: 1000px) {
     top: 1px; /* Ajusta la posición vertical según tus preferencias */
-    left: 1px; /* Ajusta la posición horizontal según tus preferencias */
+    left: 600px; /* Ajusta la posición horizontal según tus preferencias */
+    border-radius: 5px; /* Bordes redondeados */
+    padding:5px;
   }
 }
 #texto-superior-izquierda {
-    width: 400px; /* Ancho del cuadro de texto */
-    height: 200px; /* Altura del cuadro de texto */
+    width: 580px; /* Ancho del cuadro de texto */
+    height: 142px; /* Altura del cuadro de texto */
     resize: none; /* Evita que el usuario redimensione el cuadro */
     border: none; /* Elimina el borde del cuadro de texto */
+    background-color:  rgba(3, 51, 58, 0.7);  /* Cambia "yellow" al color que desees */
   /*  outline: none; /* Elimina el resaltado del cuadro de texto al hacer clic */
-    font-size: 19.1px; /* Tamaño de fuente del texto */
+    font-size: 16px; /* Tamaño de fuente del texto */
     font-family:'Italic_IV50', sans-serif; /* Fuente del texto */
+    color: rgb(208, 222, 47); /* Cambia "red" al color que desees para el texto */
     @media (max-width: 1000px) {
     font-size: 9.5px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    width: 200px; /* Ancho del cuadro de texto */
-    height: 100px; /* Altura del cuadro de texto */
+    width: 290px; /* Ancho del cuadro de texto */
+    height: 99px; /* Altura del cuadro de texto */
 }
 }
 /* Estilo para el contenedor de botones */
 #botones {
     position: fixed;
     left: 9%;
-    top: 30%;
+    top: 20%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -82,21 +88,23 @@
 /* Estilo para el contenedor de cada botón y su texto */
 .boton-container {
     display: flex;
+   /* flex-direction: row; /* Alinea los botones horizontalmente */
     align-items: center;
-    gap: 30px; /* Ajusta el espacio entre el botón y el texto */
+    gap: 0px; /* Ajusta el espacio entre el botón y el texto */
 }
 /* Estilo para el texto de los botones */
 .boton-texto {
-    font-size: 30px; /* Tamaño de fuente para el texto de los botones */
-    color: #ffffff;
-    margin: 0; /* Elimina el margen predeterminado */
-    @media (max-width: 1000px) {
-    font-size: 15px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    font-family: 'Cooper Black', sans-serif; /* Fuente Curlz MT para el título */
+    font-size: 20px; /* Tamaño de fuente para el texto de los botones */
+    color: #b2800c;
+    margin-left: 7%; /* Ajusta el margen derecho para alinear el texto a la posición deseada */   
+     @media (max-width: 1000px) {
+    font-size: 17px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
   }
 }
 /* Estilo para los botones (sin cambios) */
 .boton-enlace {
-    background: linear-gradient(to bottom, rgb(193, 31, 233), rgb(0, 0, 0));
+    background: linear-gradient(to bottom, rgb(84, 10, 103), rgb(0, 0, 0));
     color: #ffffff !important;
     box-shadow: 0px 5px 0px 0px #151718;
     width: 150px;
@@ -115,7 +123,7 @@
     transform: perspective(10px) translateZ(3px);
 }
 .title-container {
-    background: linear-gradient(to bottom, rgba(249, 239, 102, 0.4), rgba(245, 166, 35, 0.7)); /* Degradado de colores con transparencia para el fondo del cuadro */
+    background: linear-gradient(to bottom, rgba(127, 122, 45, 0.4), rgba(158, 108, 26, 0.7)); /* Degradado de colores con transparencia para el fondo del cuadro */
   /*  background-color: rgba(57, 64, 71, 0.7); /* Color con transparencia */
            /* background: linear-gradient(to bottom, #f9ef66, #f5a623); /* Degradado de colores para el fondo del cuadro */
             padding: 10px; /* Espaciado interno dentro del cuadro */
@@ -125,253 +133,204 @@
         }
         h1 {
             font-family: "Curlz MT", cursive; /* Fuente Curlz MT para el título */
-            color: #4d0f8b;
-            text-align: center;
-            margin-top: 0px;
-            font-size: 60px; /* Tamaño del título, puedes ajustarlo aquí */
-            margin-right: 0%; /* Ajusta el margen derecho para alinear el texto a la posición deseada */
+            color: #17022c;
+            text-align: left;
+            margin-top: 1px;
+            font-size: 54px; /* Tamaño del título, puedes ajustarlo aquí */
+            margin-left: 3%; /* Ajusta el margen derecho para alinear el texto a la posición deseada */
             @media (max-width: 1000px) {
-    font-size: 38px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    font-size: 37px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
   }
             /*    opacity: 0.1; /* Ajusta el valor de opacidad según tus preferencias */
         }
-        h2 {
-            font-family: 'Cooper Black', sans-serif; /* Fuente Curlz MT para el título */
-            color: #f9ef66;
-            text-align: right;
-            margin-top: 20px;
-            font-size: 30px; /* Tamaño del título, puedes ajustarlo aquí */
-            margin-right: 3%; /* Ajusta el margen derecho para alinear el texto a la posición deseada */
-            @media (max-width: 1000px) {
-            font-size: 16px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-  }
-        }
-/* Ajusta el margen izquierdo del contenedor principal para moverlo hacia la derecha */
-.preguntas-box {
-    margin-left: auto; /* Esto alinea el cuadro a la derecha */
-    margin-right: 3% ; /* Esto centra el cuadro horizontalmente en la pantalla */
-    max-width: 500px;
-    padding: 20px;
-    background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
-    border: 1px solid #5f2727;
-    border-radius: 5px;
+        #audioReproducir::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+#botonReproducir {
+    position: fixed; /* Fija la posición del botón */
+  /* position: absolute;*/
+    bottom: 600px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+    left: 1px; /* Lo centra horizontalmente en relación al contenedor padre */
+    /*transform: translateX(-50%); /* Lo centra completamente horizontalmente */
+    z-index: 1; /* Ajusta el valor z-index si es necesario */
+    background-color: #5d9a1b; /* Color de fondo del botón */
+    color: #FFFFFF; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 10px 20px; /* Ajusta el padding para el tamaño del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    /* Otros estilos según tus preferencias */
     @media (max-width: 1000px) {
-    font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    max-width: 260px;
-    background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
-    border: 1px solid #5f2727;
-  }
+        bottom: 355px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+        left: 1px; /* Lo centra horizontalmente en relación al contenedor padre */
+    }
 }
-/* Estilos adicionales para el cuadro de preguntas */
-.preguntas-box form {
-    /* Añade estilos adicionales aquí si es necesario */
-            font-family: "Times New Roman", Times, serif; /* Utiliza Times New Roman como fuente */
-            margin-left: auto; /* Esto alinea el cuadro a la derecha */
-            margin-right: auto; /* Esto centra el cuadro horizontalmente en la pantalla */
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-           background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(18, 27, 23)); /* Fondo de degradado amarillo y negro */
-            border: 1px solid #5f2727;
-            border-radius: 5px;
-            @media (max-width: 1000px) {
-    font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    max-width: 260px;
-    background: linear-gradient(to bottom, rgb(247, 119, 28), rgb(17, 21, 19));
-    border: 1px solid #5f2727;
-  }
-        }
-        p {
-            font-size: 23px;
-            color: #f5f2f2;
-            margin-bottom: 10px; /* Espacio inferior entre preguntas */
-        }
-        /* Espacio entre las preguntas cuando se muestra la segunda pregunta */
-.mostrar-pregunta2 p {
-    margin-bottom: 1px; /* Ajustar el espacio inferior cuando se muestra la segunda pregunta */
+#cuadroTexto {
+    position: fixed;
+    top: 90px; /* Ajusta la distancia desde la parte superior */
+    left: 40%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado horizontal */
+    /* Opcionalmente, puedes agregar otras propiedades de estilo, como el tamaño, el color de fondo, el borde, etc. */
+    width: 300px;
+    background-color: white;
+    border: 1px solid #000;
+    padding: 10px;
 }
-        label {
-            font-weight: bold;
-            display: block; /* Hacer que las etiquetas sean elementos de bloque para ajustar espaciado */
-            margin-bottom: 1px; /* Espacio inferior entre etiquetas y opciones */
-        }
-        input[type="radio"] {
-            margin-right: 8px;
-        }
-        button[type="button"] {
-            background: linear-gradient(to bottom, rgb(31, 233, 163), rgb(18, 27, 23)); /* Fondo de degradado amarillo y negro */
-          /*  background-color: #2f8bef;*/
-            color: #211e1e;
-            border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button[type="button"]:hover {
-            background-color: #3a89dd;
-        }
-        #resultado {
-            font-size: 22px;
-            text-align: right;
-            margin-top: 20px;
-            color: #52877e;
-            margin-right: 3%; /* Ajusta el margen derecho para alinear el texto a la posición deseada */
-            @media (max-width: 1000px) {
-    font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-            }
-        }
+#cuadroTexto2 {
+    position: fixed;
+    top: 75px; /* Ajusta la distancia desde la parte superior */
+    left: 30%; /* Centra horizontalmente */
+    width: 380px; /* Ancho del cuadro de texto */
+    height: 458px; /* Altura del cuadro de texto */
+    resize: none; /* Evita que el usuario redimensione el cuadro */
+    border: none; /* Elimina el borde del cuadro de texto */
+    background-color:  rgba(211, 235, 239, 0.7);  /* Cambia "yellow" al color que desees */
+  /*  outline: none; /* Elimina el resaltado del cuadro de texto al hacer clic */
+    font-size: 16px; /* Tamaño de fuente del texto */
+    font-family:'Italic_IV50', sans-serif; /* Fuente del texto */
+    /*color: rgb(208, 222, 47); /* Cambia "red" al color que desees para el texto */
+    @media (max-width: 1000px) {
+    font-size: 9.5px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    width: 290px; /* Ancho del cuadro de texto */
+    height: 99px; /* Altura del cuadro de texto */
+}
+}
+#botonReproducir:hover {
+    background-color: #4e9c0a; /* Cambia el color de fondo al pasar el mouse */
+}
     </style>
 </head>
 <body>
     <div class="title-container">
-    <h1>Hola Mayer Bienvenida :3</h1>
+    <h1>Hola Mayer Bienvenida Nuevamente :'3</h1>
 </div>
-    <h2>Responde las preguntas porfi 🙂</h2>
+<audio controls id="miAudio">
+    <source src="https://drive.google.com/uc?export=download&id=16VOSFSRpGYJ5aOWXAVFsaywkPvfzv6s-" type="audio/mpeg">
+</audio>
+<textarea id="cuadroTexto"></textarea>
+<textarea id="cuadroTexto2"></textarea>
     <div class="cuadro-texto">
-        <textarea id="texto-superior-izquierda" placeholder="Los botones aun no deberias presionarlos, cuando termines de responder, envias las respuestas y se abre tu correo, solo le das enviar y listo, ufff que dificil hacer una pagina web 😪 no me juzgues jaja"readonly></textarea></textarea>
-    </div>
-    <div class="preguntas-box">
-        <form action="#" id="quizForm">
-            <p>Wan.  ¿Podemos Salir Este Fin De Semana?</p>
-            <label><input type="radio" name="q1" value="a" onclick="habilitarPregunta2()">a) Si :D</label><br>
-            <label><input type="radio" name="q1" value="b" onclick="mostrarMensaje()">b)  No :'c</label><br>
-            <p id="pregunta2" style="display: none;">Tu. ¿En Donde Vas A Estar?</p>
-            <label id="respuesta2a" style="display: none;"><input type="radio" name="q2" value="a" onclick="habilitarPregunta3()" >a) Pasto</label><br>
-            <label id="respuesta2b" style="display: none;"><input type="radio" name="q2" value="b" onclick="mostrarMensaje2()" >b) Ipi</label><br>
-            <p id="pregunta3" style="display: none;">Tri. ¿Que Dia Prefieres?</p>
-            <label id="respuesta3a" style="display: none;"><input type="radio" name="q3" value="a" onclick="habilitarPregunta4()" >a) Sabado</label><br>
-            <label id="respuesta3b" style="display: none;"><input type="radio" name="q3" value="b" onclick="habilitarPregunta41()" >b) Domingo</label><br>
-            <!-- Nueva pregunta para comentarios finales -->
-            <p id="pregunta5" style="display: none;">Fai. Escribe tu excusa entonces :'c jaja :</p>
-            <textarea id="comentarioFinal2" style="display: none;"></textarea>
-            <p id="pregunta4" style="display: none;">For. Añade un comentario sobre la salida o si tienes algo por decir:</p>
-            <textarea id="comentarioFinal" style="display: none; overflow-wrap: break-word; white-space: pre-wrap;"></textarea>       
-            <button type="button" id="enviarBtn" disabled onclick="calcularResultado()">Envia tus hermosas respuestas jaja</button>
-        </form>
+        <textarea id="texto-superior-izquierda" placeholder="Bueno supongo que es lo ultimo, ahora ya estan habilitados los botones, cada boton tiene algo especial o importante para mi, la intencion es brindarte algo bonito de lo que he pensado durante mucho tiempo, pero que nunca te dije, y al menos por un momento llamar tu atención o sacarte una sonrisa. 🐱"readonly></textarea></textarea>
     </div>
     <div id="degradado-fondo">
         <div id="botones">
             <div class="boton-container">
-                <button class="boton-enlace" id="boton1" value="b1" name="qb1" onclick="mostrarTexto('Te dije que no presionaras los botones 😾', 'textoBoton1',this.value); guardarValorBoton1(this.value)">
-                    <a href="https://ivanvi14.github.io/" target="_blank">Boton 1</a>
+                <button class="boton-enlace" id="boton1" value="b1" name="qb1" onclick="mostrarTexto('Esta cancion es mi favorita y siempre quise dedicartela, pero no fui capaz de hacerlo tal vez por pensar mucho en lo que dirias, aunque debo decir que ya te dedique muchas canciones o partes de ellas, hasta que un dia quede sin mas canciones por subir, o tal vez solo eran mi parte favorita de la cancion :v jaja xd, por cierto no me olvido de la cancion que algun dia tu me dedicaste (Count On Me - Bruno Mars), me guta aunque la letra ya no se cumplio en nosotros, fue la primera cancion que alguien me dedicaba 🥰', 'textoBoton1',this.value); guardarValorBoton1(this.value)">
+                    <a href="https://www.youtube.com/watch?v=z1rBaPVf82E" target="_blank">Boton 1</a>
                 </button>
                 <span id="textoBoton1" class="boton-texto"></span>
             </div>
             <div class="boton-container">
-                <button class="boton-enlace" id="boton2" value="b2" name="qb2" onclick="mostrarTexto('Sabía que lo presionarías 🤨', 'textoBoton2',this.value); guardarValorBoton2(this.value)">
-                    <a href="https://ivanvi14.github.io/" target="_blank">Boton 2</a>
+                <button class="boton-enlace" id="boton2" value="b2" name="qb2" onclick="mostrarTexto('Nunca olvidare eso y lo feliz que llegaba a mi casa, aparte de todo eso hay muchas cosas que recuerdo siempre, como la vez que me diste un regalo por mi cumpleaños, o el único domingo que salimos a almorzar solos, o ese jueves que salimos a tomar, solo porque si :3, de verdad que me hiciste muy feliz durante mucho tiempo 🐱.', 'textoBoton2',this.value); guardarValorBoton2(this.value)">
+                    <a href="https://vm.tiktok.com/ZMj62u8Mk/" target="_blank">Boton 2</a>
                 </button>
                 <span id="textoBoton2" class="boton-texto"></span>
             </div>
             <div class="boton-container">
-                <button class="boton-enlace" id="boton3" value="b3" name="qb3" onclick="mostrarTexto('Siempre te gusta llevar la contraria 😖','textoBoton3',this.value); guardarValorBoton3(this.value)">
-                    <a href="https://ivanvi14.github.io/" target="_blank">Boton 3</a>
+                <button class="boton-enlace" id="boton3" value="b3" name="qb3" onclick="mostrarTexto('Y si, para mi siempre serás la más bonita, y aunque siempre he pensado que eso no es tan importante, obviamente se debe sentir atracción y eso, pero la forma en que te miraba era muy rara, me gustaba todo de ti, tu cabello, tus gestos, tu estilo, tus ojos hermosos, si estaba medio pendejo, ahora no puedo olvidarlo, es tan complicado, que cuando miro a alguien debo compararla, pa ver si se parece a ti, es mas, lo que no me gusta en otras como el maquillaje y esas cosas, en ti pienso que se ve tan bien, y no debe ser asi o solo lo digo porque eres tu, jummm quien sabe 🤨 jajaj','textoBoton3',this.value); guardarValorBoton3(this.value)">
+                    <a href="https://www.flickr.com/gp/199209345@N04/5RmDeB5V0m" target="_blank">Boton 3</a>
                 </button>
                 <span id="textoBoton3" class="boton-texto"></span>
             </div>
             <div class="boton-container">
-                <button class="boton-enlace" id="boton4" value="b4" name="qb4" onclick="mostrarTexto('Tranqui luego los habilito 🫣', 'textoBoton4',this.value); guardarValorBoton4(this.value)">
-                    <a href="https://ibb.co/RQvDDHM" target="_blank">Boton 4</a>
+                <button class="boton-enlace" id="boton4" value="b4" name="qb4" onclick="mostrarTexto('Ufff lo ultimo creo que seria esto, supongo que era una de las cosas que me faltaban hacer y obviamente nunca habia hecho, aunque la escribi a mano, no tengo la certeza de saber si te la voy a entregar o no, aunque bueno no se mi letra es fea, asi que tambien la enviare virtual jaja, perdon por hacerla tan larga, son muchas cosas por decir.', 'textoBoton4',this.value); guardarValorBoton4(this.value)">
+                    <a href="https://docdro.id/5hW1Lwj" target="_blank">Boton 4</a>
                 </button>
                 <span id="textoBoton4" class="boton-texto"></span>
             </div>
+            <div class="boton-container">
+                <button class="boton-enlace" id="boton5" value="b5" name="qb5" onclick="mostrarTexto('jajaj todos esos tik toks, para hacerte reir un poco ojala, son muchos lo siento, tengo muchas cosas en el celular y no queria que se pierdan jaja', 'textoBoton5',this.value); guardarValorBoton5(this.value)">
+                    <a href="https://drive.google.com/drive/folders/12iIF5PD2tFv1up3KworJJZmlwTwljLqx" target="_blank">Boton 5</a>
+                </button>
+                <span id="textoBoton5" class="boton-texto"></span>
+            </div>
+            <button id="botonReproducir"> Finalizar </button>
         </div>    
         <!-- Tu contenido principal aquí -->
     </div>
-    <div id="contenedor-texto"></div>
-    <p id="resultado"></p>
-    <script>
-        function habilitarPregunta2() {
-            alert("Esooo sabia que querias :3");
-            var respuesta1 = document.querySelector('input[name="q1"]:checked').value;
-            var pregunta2 = document.getElementById('pregunta2');
-            var respuesta2a = document.getElementById('respuesta2a');
-            var respuesta2b = document.getElementById('respuesta2b');
-            document.getElementById('enviarBtn').disabled = false;
-            pregunta5.style.display = "none";
-            comentarioFinal2.style.display = "none";
-            pregunta5.classList.remove("mostrar-pregunta4"); // Agregar la clase para ajustar el espaciado
-            if (respuesta1 === "a") {
-                pregunta2.style.display = "block";
-                respuesta2a.style.display = "block";
-                respuesta2b.style.display = "block";
-                pregunta2.classList.add("mostrar-pregunta2"); // Agregar la clase para ajustar el espaciado
-            } else {
-                pregunta2.style.display = "none";
-                respuesta2a.style.display = "none";
-                respuesta2b.style.display = "none";
-                pregunta2.classList.remove("mostrar-pregunta2"); // Agregar la clase para ajustar el espaciado
+    <script> 
+     // Obtener referencias al elemento de audio y al botón
+    var miAudio = document.getElementById("miAudio");
+    var botonReproducir = document.getElementById("botonReproducir");
+    cuadroTexto.style.display = "none";
+    cuadroTexto2.style.display = "none";
+    botonReproducir.addEventListener("click", function() {
+        console.log("El valor del botón es: " + valorBoton1);
+        console.log("El valor del botón es: " + valorBoton2);
+        console.log("El valor del botón es: " + valorBoton3);
+        console.log("El valor del botón es: " + valorBoton4);
+        console.log("El valor del botón es: " + valorBoton5);
+            
+            var r1 = 0;
+            var r2 = 0;
+            var r3 = 0;
+            var r4 = 0;
+            var r5 = 0;
+            var rr1 = 0;
+           if (valorBoton1 === "b1") {
+                r1 = 1;
+                var r11 = "";
             }
+            else{
+                var r11 = "1,";
+            }
+            if (valorBoton2 === "b2") {
+                r2 = 1;
+                var r22 = "";
+            }
+            else{
+                var r22 = "2,";
+            }
+            if (valorBoton3 === "b3") {
+                r3 = 1;
+                var r33 = "";
+            }
+            else{
+                var r33 = "3,";
+            }
+            if (valorBoton4 === "b4") {
+                r4 = 1;
+                var r44 = "";
+            }
+            else{
+                var r44 = "4,";
+            }
+            if (valorBoton5 === "b5") {
+                r5 = 1;
+                var r55 = "";
+            }
+            else{
+                var r55 = "5,";
+            }
+            if (r1===1){
+                if(r2===1){
+                    if(r3===1){
+                        if(r4===1){
+                            if(r5===1){
+                                rr1=1
+                            }
+                        }
+                    }
+                }
+            }
+        if (miAudio.paused) {
+            if(rr1===1){
+            miAudio.play(); // Reproducir el audio si está pausado
+            cuadroTexto2.value = "Bueno creo que ya terminé de humillarme jajaj ay no que paila, pero la verdad fuí feliz haciendolo, y no se que pienses pero en parte hasta a mi me parece ridiculo todo esto, pero solo te pido que entiendas la verdad no estoy bien, sabes que soy medio raro a veces jaja, aunque tambien digo, todo esto quedo chimbita jaja fueron muchos dias haciendo esto, pero igual ya no me importa el tiempo que suelo perder jaja aquí entre nos, jamas volveré a hacer nada por nadie ya aprendí la lección, ya no quiero a nadie jaja y bueno supongo que es el final, si no sonó la cancion reinicia la pagina xd, bye baby :'3";
+                cuadroTexto2.style.display = "block";
+                cuadroTexto.style.display = "none";
+            }
+            if(rr1===0){
+                cuadroTexto.value = "Aun te falta presionar el/los boton/es "+r11+r22+r33+r44+r55+" presionalos porfi :)";
+                cuadroTexto.style.display = "block";
+    // Muestra el cuadro de texto cambiando su estilo 
+}
+        } else {
+            miAudio.pause(); // Pausar el audio si está reproduciéndose
         }
-        function mostrarMensaje() {
-            alert("Como que no quieres, te odio >:v jajaj");
-            pregunta2.style.display = "none";
-            respuesta2a.style.display = "none";
-            respuesta2b.style.display = "none";
-            pregunta2.classList.remove("mostrar-pregunta2"); // Agregar la clase para ajustar el espaciado
-            pregunta3.style.display = "none";
-            respuesta3a.style.display = "none";
-            respuesta3b.style.display = "none";
-            pregunta3.classList.remove("mostrar-pregunta3"); // Agregar la clase para ajustar el espaciado
-            document.getElementById('enviarBtn').disabled = false;
-            // Desseleccionar radios de la segunda pregunta
-            var pregunta5 = document.getElementById('pregunta5');
-            var comentarioFinal2 = document.getElementById('comentarioFinal2');
-            pregunta5.style.display = "block";
-            comentarioFinal2.style.display = "block";
-            pregunta4.style.display = "none";
-            comentarioFinal.style.display = "none";
-            pregunta4.classList.remove("mostrar-pregunta4"); // Agregar la clase para ajustar el espaciado
-        document.querySelectorAll('input[name="q2"]').forEach(function(radio) {
-            radio.checked = false;
-            radio.disabled = false; // Habilitar radios nuevamente
-        });
-        document.querySelectorAll('input[name="q3"]').forEach(function(radio) {
-            radio.checked = false;
-            radio.disabled = false; // Habilitar radios nuevamente
-        });
-        }
-        function habilitarPregunta3() {
-            alert("Weno a viajar entonces :)");
-            var respuesta2 = document.querySelector('input[name="q2"]:checked').value;
-            var pregunta3 = document.getElementById('pregunta3');
-            var respuesta3a = document.getElementById('respuesta3a');
-            var respuesta3b = document.getElementById('respuesta3b');
-            if (respuesta2 === "a") {
-                pregunta3.style.display = "block";
-                respuesta3a.style.display = "block";
-                respuesta3b.style.display = "block";
-                pregunta3.classList.add("mostrar-pregunta2"); // Agregar la clase para ajustar el espaciado
-            } 
-        }
-        function mostrarMensaje2() {
-            alert("Uy entonces vienes tu, chevere xd");
-            var respuesta2 = document.querySelector('input[name="q2"]:checked').value;
-            var pregunta3 = document.getElementById('pregunta3');
-            var respuesta3a = document.getElementById('respuesta3a');
-            var respuesta3b = document.getElementById('respuesta3b');
-            if (respuesta2 === "b") {
-                pregunta3.style.display = "block";
-                respuesta3a.style.display = "block";
-                respuesta3b.style.display = "block";
-                pregunta3.classList.add("mostrar-pregunta2"); // Agregar la clase para ajustar el espaciado
-        }
-    }
-    function habilitarPregunta4() {
-            alert("Nunca hemos salido un sabado :0");
-            var pregunta4 = document.getElementById('pregunta4');
-            var comentarioFinal = document.getElementById('comentarioFinal');
-            pregunta4.style.display = "block";
-            comentarioFinal.style.display = "block";
-    }
-    function habilitarPregunta41() {
-            alert("Siempre eran buenos esos domingos :)");
-            var pregunta4 = document.getElementById('pregunta4');
-            var comentarioFinal = document.getElementById('comentarioFinal');
-            pregunta4.style.display = "block";
-            comentarioFinal.style.display = "block";
-    }
+    });
     function mostrarTexto(texto, spanId) {   
     // Obtener todos los elementos <span> con la clase "boton-texto"
     var spans = document.getElementsByClassName("boton-texto");
@@ -390,84 +349,64 @@ var valorBoton1 = ""; // Variable global para almacenar el valor del botón
 var valorBoton2 = ""; // Variable global para almacenar el valor del botón
 var valorBoton3 = ""; // Variable global para almacenar el valor del botón
 var valorBoton4 = ""; // Variable global para almacenar el valor del botón
+var valorBoton5 = ""; // Variable global para almacenar el valor del botón
+var r111=0;
+var r222=0;
+var r333=0;
+var r444=0;
+var r555=0;
+var r666=0;
+
 function guardarValorBoton1(valor1) {
     valorBoton1 = valor1;
+    cuadroTexto.style.display = "none";
+    r111 = 1;
+    r666=r111+r222+r333+r444+r555;
+if (r666===5){
+    cuadroTexto.value = "Ya puedes presionar finalizar";
+    cuadroTexto.style.display = "block";
+}
 }
 function guardarValorBoton2(valor2) {
     valorBoton2 = valor2;
+    cuadroTexto.style.display = "none";
+    r222 = 1;
+    r666=r111+r222+r333+r444+r555;
+if (r666===5){
+    cuadroTexto.value = "Ya puedes presionar finalizar";
+    cuadroTexto.style.display = "block";
+}
 }
 function guardarValorBoton3(valor3) {
     valorBoton3 = valor3;
+    cuadroTexto.style.display = "none";
+    r333 = 1;
+    r666=r111+r222+r333+r444+r555;
+if (r666===5){
+    cuadroTexto.value = "Ya puedes presionar finalizar";
+    cuadroTexto.style.display = "block";
+}
 }
 function guardarValorBoton4(valor4) {
     valorBoton4 = valor4;
+    cuadroTexto.style.display = "none";
+    r444 = 1;
+    r666=r111+r222+r333+r444+r555;
+if (r666===5){
+    cuadroTexto.value = "Ya puedes presionar finalizar";
+    cuadroTexto.style.display = "block";
 }
-        function calcularResultado() {
-            var form = document.getElementById("quizForm");
-            console.log("El valor del botón es: " + valorBoton1);
-            console.log("El valor del botón es: " + valorBoton2);
-            console.log("El valor del botón es: " + valorBoton3);
-            console.log("El valor del botón es: " + valorBoton4);
-            var respuesta1 = form.elements["q1"].value;
-            var respuesta2 = form.elements["q2"].value;
-            var respuesta3 = form.elements["q3"].value;
-            var aciertos = 0;
-            var r1 = 0;
-            var r2 = 0;
-            var r3 = 0;
-            var r4 = 0;
-           if (valorBoton1 === "b1") {
-                r1 = 1;
-            }
-            if (valorBoton2 === "b2") {
-                r2 = 1;
-            }
-            if (valorBoton3 === "b3") {
-                r3 = 1;
-            }
-            if (valorBoton4 === "b4") {
-                r4 = 1;
-            }
-            if (respuesta1 === "b") {
-                aciertos = 1;
-            }
-            if (respuesta1 === "a") {
-                if (respuesta2 === "a") {
-                    if (respuesta3 === "a") {
-                aciertos = 211;
-            }
-                    if (respuesta3 === "b") {
-                aciertos = 212;
-            }
-            }
-                if (respuesta2 === "b") {
-                    if (respuesta3 === "a") {
-                aciertos = 221;
-            }
-                    if (respuesta3 === "b") {
-                aciertos = 222;
-            }
-            }
-            }
-            var porcentaje = aciertos;
-            if (respuesta1 === "b") {
-            var resultado = "Lamento que no quisieras salir, me hubiese encantado :'3";
-            }
-            if (respuesta1 === "a") {
-            var resultado = "Me alegra que hayas querido salir, sera un buen dia  :3";
-            }
-          // Obtener el comentario del usuario
-            var comentarioUsuario = document.getElementById("comentarioFinal").value;
-            var comentarioUsuario2 = document.getElementById("comentarioFinal2").value;
-            document.getElementById("resultado").innerHTML = resultado;
-            enviarCorreo(porcentaje,comentarioUsuario,comentarioUsuario2,r1,r2,r3,r4);
-        }
-        function enviarCorreo(porcentaje,comentarioUsuario,comentarioUsuario2,r1,r2,r3,r4) {
-            var correoDestino = "andresv-14@hotmail.com";
-            var asunto = "Respuesta";
-            var mensaje = "-------------------------------------------Muchas gracias por responder TQM <3.-----------------------------------------\n----------------------%&$&$%%&&$$%$12w2w223s2#"+porcentaje+"fggsdg2312$%%3----------------------------------------\n------------------------$%$%&%&$&$&&#"+r1+"$$$%$%$$&#"+r2+"%$$%#"+r3+"%&%$%#"+r4+"$$%$%$%-------------------------\n--------------"+comentarioUsuario+"-------------\n----------"+comentarioUsuario2+"---------------";
-            window.location.href = "mailto:" + correoDestino + "?subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(mensaje);
-        }
+}
+function guardarValorBoton5(valor5) {
+    valorBoton5 = valor5;   
+    cuadroTexto.style.display = "none"; 
+    r555 = 1;
+    r666=r111+r222+r333+r444+r555;
+if (r666===5){
+    cuadroTexto.value = "Ya puedes presionar finalizar";
+    cuadroTexto.style.display = "block";
+}
+}
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
